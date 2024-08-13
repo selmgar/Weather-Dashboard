@@ -73,7 +73,6 @@ class WeatherService {
     const coordinates = this.destructureLocationData(locationData);
     const weatherQuery = this.buildWeatherQuery(coordinates);
     const weatherData = await this.fetchLocationData(weatherQuery);
-    console.log(weatherData);
     const currentWeather = this.parseCurrentWeather(weatherData);
     return currentWeather;
   }
